@@ -65,6 +65,9 @@ echo
 
 # =======================================================
 # Set Wordpress root dir:
+# Look for wp-content, not wp-config.php, since all installs 
+# have to have a wp-content folder, but may not have a 
+# wp-config.php file yet (e.g., new downloads or template installs). 
 WP_ROOT=$( realpath . ) # <-- Wordpress root is current dir by default.
 [ -e "$WP_ROOT/wp-content" ] || WP_ROOT="/var/www/wordpress"
 read -e -p "Enter Wordpress root directory: " -i $WP_ROOT IN_ROOT
@@ -115,7 +118,8 @@ find ${WP_ROOT} -type d -exec chmod 755 {} \;
 find ${WP_ROOT} -type f -exec chmod 644 {} \;
  
 # =======================================================
-echo -e "Setting Wordpress group to manage the 'wp-config.php' file, but prevent world access. Ignored if the file doesn't exist."
+echo -e "Setting Wordpress group to manage the 'wp-config.php' file, but prevent world access."
+echo -e "Ignored if the file doesn't exist, since the Wordpress install might be new, with no active wp-config.php file yet."
 if [ -f "$WP_ROOT/wp-config.php" ]; then 
 	chgrp ${WS_GROUP} ${WP_ROOT}/wp-config.php
 	chmod 660 ${WP_ROOT}/wp-config.php
