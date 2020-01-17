@@ -11,7 +11,7 @@
    1. Make sure the `wordpress_set_file_permission.sh` is executable:
        `chmod +x wordpress_set_file_permission.sh`
    1. As **root**, Run `wordpress_set_file_permission.sh`:
-       `sudo ./wp-fileperm-fix.sh`
+       `sudo ./wordpress_set_file_permission.sh`
 
 This bash script configures WordPress file permissions based on recommendations from [Hardening Wordpress](https://wordpress.org/support/article/hardening-wordpress/).
 
