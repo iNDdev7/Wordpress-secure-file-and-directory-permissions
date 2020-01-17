@@ -8,11 +8,11 @@
 - Operating system tested: **Ubuntu 19**
 - Usage:
    1. Copy the project to an Ubuntu folder, or any other linux flavor that has bash. 
-   1. Make sure the `wordpress_set_file_permission.sh` is executable:
+   1. Make sure the *wordpress_set_file_permission.sh* is executable:
    
        `chmod +x wordpress_set_file_permission.sh`
        
-   1. As **root**, Run `wordpress_set_file_permission.sh`:
+   1. As **root**, Run *wordpress_set_file_permission.sh*:
    
        `sudo ./wordpress_set_file_permission.sh`
 
