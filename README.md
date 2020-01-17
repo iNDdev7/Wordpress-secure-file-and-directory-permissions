@@ -12,7 +12,7 @@
    
        `chmod +x wordpress_set_file_permission.sh`
        
-   1. As **root**, Run *wordpress_set_file_permission.sh*:
+   1. As **root**, run *wordpress_set_file_permission.sh*:
    
        `sudo ./wordpress_set_file_permission.sh`
 
